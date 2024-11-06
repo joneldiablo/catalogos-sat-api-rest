@@ -3,8 +3,7 @@ import Knex from 'knex';
 import morgan from 'morgan';
 import cors from 'cors';
 
-import expressRouter, { routesObject } from 'adba/src/express-router';
-import { generateModels } from 'adba/src/generate-sqlite-models';
+import { expressRouter, routesObject, generateSQLiteModels } from 'adba';
 
 // Configuración de Knex para SQLite
 const knexInstance = Knex({
@@ -15,16 +14,6 @@ const knexInstance = Knex({
   useNullAsDefault: true,
 });
 
-// Generar modelos dinámicamente
-const setupModels = async () => {
-  try {
-    return await generateModels(knexInstance);
-  } catch (err) {
-    console.error('Error al generar modelos:', err);
-    process.exit(1);
-  }
-};
-
 const startServer = async () => {
   const app = express();
   const port = 3000;
@@ -33,7 +22,7 @@ const startServer = async () => {
   app.use(express.json());
   app.use(morgan('dev'));
 
-  const models = await setupModels();
+  const models = await generateSQLiteModels(knexInstance);
 
   // Crear el objeto de rutas usando los modelos
   const myRoutesObject = routesObject(models, {}, {
@@ -47,7 +36,7 @@ const startServer = async () => {
   });
 
   // Configurar el enrutador de express según el objeto de rutas
-  app.use('/api', expressRouter(myRoutesObject));
+  app.use('/api', expressRouter(myRoutesObject, { debugLog: process.env.ENV !== 'PROD' }));
 
   app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}/api`);
