@@ -1,20 +1,31 @@
+#!/usr/bin/env node
 import express from 'express';
 import Knex from 'knex';
 import morgan from 'morgan';
 import cors from 'cors';
+import path from 'path';
+import { Server } from 'http';
 
-import { expressRouter, routesObject, generateSQLiteModels } from 'adba';
+import { expressRouter, routesObject, generateModels } from 'adba';
 
-// Configuración de Knex para SQLite
-const knexInstance = Knex({
-  client: 'sqlite3',
-  connection: {
-    filename: './sat-catalogs/catalogs.db'
-  },
-  useNullAsDefault: true,
-});
+import { performUpdateIfNeeded } from './download-db';
+
+const TMP_FOLDER = process.env.TMP_FOLDER ?? './tmp';
 
 const startServer = async () => {
+  await performUpdateIfNeeded();
+
+  // Configuración de Knex para SQLite
+  const knexInstance = Knex({
+    client: 'sqlite3',
+    connection: {
+      filename: path.join(TMP_FOLDER, 'catalogs.db')
+    },
+    useNullAsDefault: true,
+  });
+  const checkDatabase = await knexInstance.raw('SELECT 2+2 as testConn');
+  console.log('database says: 2 + 2 =', checkDatabase[0].testConn);
+
   const app = express();
   const port = 3000;
 
@@ -22,7 +33,7 @@ const startServer = async () => {
   app.use(express.json());
   app.use(morgan('dev'));
 
-  const models = await generateSQLiteModels(knexInstance);
+  const models = await generateModels(knexInstance);
 
   // Crear el objeto de rutas usando los modelos
   const myRoutesObject = routesObject(models, {}, {
@@ -38,9 +49,22 @@ const startServer = async () => {
   // Configurar el enrutador de express según el objeto de rutas
   app.use('/api', expressRouter(myRoutesObject, { debugLog: process.env.ENV !== 'PROD' }));
 
-  app.listen(port, () => {
+  const server = app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}/api`);
   });
+
+  setTimeout(async () => {
+    await shutdown(server, knexInstance);
+    await startServer();
+  }, 1000 * 60 * 60 * 24 * 3);
 };
 
-startServer().catch(err => console.error(err));
+async function shutdown(server: Server, knexConn: Knex.Knex<any, unknown[]>) {
+  console.log(`Server is shutdown`);
+  await knexConn.destroy();
+  return new Promise((resolve, reject) => {
+    server.close((err) => err ? reject(err) : resolve(true));
+  });
+}
+
+startServer();
