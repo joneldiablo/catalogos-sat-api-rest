@@ -50,5 +50,8 @@ git push origin "$new_version"
 # Switch back to the previous branch
 git checkout -
 
+git push cpavision --all
+git push cpavision --tags
+
 # shows new version
 echo "$new_version"
