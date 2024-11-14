@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "ts-node .",
+    "start:dev": "ts-node src/index.ts",
     "build:cjs": "tsc -p tsconfig.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:bin": "rm -rf bin/* && webpack",
@@ -29,7 +30,7 @@
   "author": "joneldiablo",
   "license": "ISC",
   "dependencies": {
-    "adba": "^1.0.4",
+    "adba": "^1.0.7",
     "axios": "^1.7.7",
     "cors": "^2.8.5",
     "express": "^4.21.1",
