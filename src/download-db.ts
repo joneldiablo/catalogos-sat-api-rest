@@ -7,12 +7,19 @@ import { promisify } from 'util';
 const TMP_FILE_PATH = './tmp/version.txt';
 const LATEST_DB_URL = 'https://github.com/phpcfdi/resources-sat-catalogs/releases/latest/download/catalogs.db.bz2';
 const VERSIONS_DB_URL = 'https://api.github.com/repos/phpcfdi/resources-sat-catalogs/tags';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 /**
  * Fetch the latest version tag from the GitHub API
  */
+const headers = GITHUB_TOKEN
+  ? { Authorization: `token ${GITHUB_TOKEN}` }
+  : {};
+
 async function getLatestVersion(): Promise<string> {
-  const response = await axios.get(VERSIONS_DB_URL);
+  const response = await axios.get(VERSIONS_DB_URL, {
+    headers
+  });
   const tags = response.data as Array<any>;
 
   if (tags.length === 0) {
@@ -48,7 +55,8 @@ async function downloadAndDecompressDb(): Promise<void> {
   const response = await axios({
     method: 'get',
     url: LATEST_DB_URL,
-    responseType: 'stream'
+    responseType: 'stream',
+    headers
   });
 
   const pipeline = promisify(stream.pipeline);
