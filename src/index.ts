@@ -48,7 +48,7 @@ const startServer = async () => {
   });
 
   // Configurar el enrutador de express según el objeto de rutas
-  app.use(${API_PATH_PREFIX}, expressRouter(myRoutesObject, { debugLog: process.env.ENV !== 'PROD' }));
+  app.use(API_PATH_PREFIX, expressRouter(myRoutesObject, { debugLog: process.env.ENV !== 'PROD' }));
 
   const server = app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}${API_PATH_PREFIX}`);
