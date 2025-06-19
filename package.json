@@ -30,7 +30,7 @@
   "author": "joneldiablo",
   "license": "ISC",
   "dependencies": {
-    "adba": "^1.0.7",
+    "adba": "^1.0.10",
     "axios": "^1.7.7",
     "cors": "^2.8.5",
     "express": "^4.21.1",
