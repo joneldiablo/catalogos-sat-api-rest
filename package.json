@@ -18,8 +18,9 @@
     "src": "src"
   },
   "scripts": {
-    "start": "ts-node .",
-    "start:dev": "ts-node src/index.ts",
+    "start": "ENV=PROD node dist/cjs",
+    "start:dev": "ENV=DEV dotenv -e .env -- ts-node-dev --respawn --transpile-only src/index.ts",
+    "start:debug": "ENV=DEBUG dotenv -e .env -- node dist/cjs",
     "build:cjs": "tsc -p tsconfig.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:bin": "rm -rf bin/* && webpack",
@@ -51,6 +52,7 @@
     "@types/node": "^22.7.9",
     "@types/unbzip2-stream": "^1.4.3",
     "babel-jest": "^29.7.0",
+    "dotenv-cli": "^8.0.0",
     "esbuild": "^0.24.0",
     "jest": "^29.7.0",
     "supertest": "^7.0.0",
