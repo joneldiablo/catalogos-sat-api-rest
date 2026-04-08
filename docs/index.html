@@ -1,87 +1,24 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>catalogos-sat-api-rest</title><meta name="description" content="Documentation for catalogos-sat-api-rest"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">catalogos-sat-api-rest</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>catalogos-sat-api-rest</h1></div><div class="tsd-panel tsd-typography"><a id="md:sqlite-auto" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Sqlite auto<a href="#md:sqlite-auto" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Generate API REST from sqlite database</p>
-<a id="md:catálogos-incluidos" class="tsd-anchor"></a><h1 class="tsd-anchor-link">Catálogos incluidos<a href="#md:catálogos-incluidos" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><ul>
-<li>Catálogos de CFDI 4.0 (<strong>cfdi-40-</strong>).</li>
-<li>Catálogos de CFDI 3.3 (<strong>cfdi-</strong>).</li>
-<li>Catálogos de CFDI De Retenciones e Información de Pagos 2.0 (<strong>ret-20-</strong>).</li>
-<li>Catálogos de complemento de Pagos 1.1 (<strong>pagos-</strong>).</li>
-<li>Catálogos de complemento de Nóminas 1.1 (<strong>nomina-</strong>).</li>
-<li>Catálogos de complemento de Comercio Exterior 1.1 (<strong>cce-</strong>).</li>
-<li>Catálogos de complemento de Comercio Exterior 2.0 (<strong>cce-20-</strong>).</li>
-<li>Catálogos de complemento de Carta Porte 2.0 (<strong>ccp-20-</strong>).</li>
-<li>Catálogos de complemento de Carta Porte 3.0 (<strong>ccp-30-</strong>).</li>
+<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>catalogos-sat-api-rest</title><meta name="description" content="Documentation for catalogos-sat-api-rest"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">catalogos-sat-api-rest</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>catalogos-sat-api-rest</h1></div><div class="tsd-panel tsd-typography"><a id="md:sat-catalogs-api-rest" class="tsd-anchor"></a><h1 class="tsd-anchor-link">SAT Catalogs API REST<a href="#md:sat-catalogs-api-rest" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>API REST auto-generada a partir de la base de datos de catálogos oficiales del SAT (Servicio de Administración Tributaria de México).</p>
+<p>Los datos se descargan automáticamente del repositorio <a href="https://github.com/phpcfdi/resources-sat-catalogs" target="_blank" class="external">phpcfdi/resources-sat-catalogs</a> al iniciar el servidor.</p>
+<a id="md:características" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Características<a href="#md:características" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li><strong>API REST completa</strong> con filtros, búsqueda, paginación y ordenamiento</li>
+<li><strong>Catálogos CFDI 4.0, 3.3</strong> y complementos (Nóminas, Pagos, Carta Porte, Comercio Exterior, etc.)</li>
+<li><strong>API Explorer</strong> interactivo con navegador de datos y ejemplos de código</li>
+<li><strong>Descarga automática</strong> de la base de datos desde GitHub</li>
+<li><strong>Autenticación GitHub</strong> configurable para mayor límite de requests</li>
 </ul>
-<a id="md:uso" class="tsd-anchor"></a><h1 class="tsd-anchor-link">Uso<a href="#md:uso" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">start</span>
+<a id="md:requisitos" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Requisitos<a href="#md:requisitos" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li>Node.js 18+</li>
+<li>npm o yarn</li>
+</ul>
+<a id="md:instalación" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Instalación<a href="#md:instalación" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span>
 </code><button type="button">Copy</button></pre>
 
-<a id="md:api-rest" class="tsd-anchor"></a><h1 class="tsd-anchor-link">API REST<a href="#md:api-rest" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><a id="md:endpoints" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Endpoints<a href="#md:endpoints" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
-<thead>
-<tr>
-<th>Método</th>
-<th>Ruta</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td><code>/api/tables</code></td>
-<td>Lista todas las tablas disponibles</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><code>/api/meta</code></td>
-<td>Lista tablas con sus columnas y tipos</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><code>/api/:tableName</code></td>
-<td>Consulta datos de una tabla</td>
-</tr>
-</tbody>
-</table>
-<a id="md:parámetros-de-consulta" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Parámetros de consulta<a href="#md:parámetros-de-consulta" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
-<thead>
-<tr>
-<th>Parámetro</th>
-<th>Descripción</th>
-<th>Ejemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>search</code></td>
-<td>Búsqueda en todas las columnas</td>
-<td><code>?search=MX</code></td>
-</tr>
-<tr>
-<td><code>limit</code></td>
-<td>Registros por página (default: 100)</td>
-<td><code>?limit=50</code></td>
-</tr>
-<tr>
-<td><code>page</code></td>
-<td>Número de página</td>
-<td><code>?page=2</code></td>
-</tr>
-<tr>
-<td><code>orderBy.columna</code></td>
-<td>Ordenar por columna</td>
-<td><code>?orderBy.id=asc</code></td>
-</tr>
-<tr>
-<td><code>select</code></td>
-<td>Columnas a retornar</td>
-<td><code>?select=id,nombre</code></td>
-</tr>
-</tbody>
-</table>
-<a id="md:ejemplos" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Ejemplos<a href="#md:ejemplos" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="bash"><span class="hl-3"># Listar países</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises&quot;</span><br/><br/><span class="hl-3"># Filtrar por búsqueda</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?search=México&quot;</span><br/><br/><span class="hl-3"># Paginación</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?page=2&amp;limit=10&quot;</span><br/><br/><span class="hl-3"># Ordenamiento</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?orderBy.c_Nombre=asc&quot;</span><br/><br/><span class="hl-3"># Seleccionar columnas específicas</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?select=c_Nombre,c_Descripcion&quot;</span>
+<a id="md:inicio-rápido" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Inicio rápido<a href="#md:inicio-rápido" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">start</span>
 </code><button type="button">Copy</button></pre>
 
-<a id="md:respuesta" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Respuesta<a href="#md:respuesta" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;data&quot;</span><span class="hl-1">: [</span><span class="hl-5">...</span><span class="hl-1">],</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;meta&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;page&quot;</span><span class="hl-1">: </span><span class="hl-6">1</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;pageSize&quot;</span><span class="hl-1">: </span><span class="hl-6">100</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;totalRecords&quot;</span><span class="hl-1">: </span><span class="hl-6">62</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
-</code><button type="button">Copy</button></pre>
-
-<a id="md:variables-de-entorno" class="tsd-anchor"></a><h1 class="tsd-anchor-link">Variables de entorno<a href="#md:variables-de-entorno" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><table>
+<p>El servidor inicia en <code>http://localhost:3000</code>. Si <code>ENABLE_FRONTEND=1</code>, la interfaz web está disponible en la raíz <code>/</code>.</p>
+<a id="md:configuración" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Configuración<a href="#md:configuración" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
 <thead>
 <tr>
 <th>Variable</th>
@@ -93,30 +30,281 @@
 <tr>
 <td><code>PORT</code></td>
 <td><code>3000</code></td>
-<td>Puerto del servidor</td>
+<td>Puerto del servidor HTTP</td>
 </tr>
 <tr>
 <td><code>API_PATH_PREFIX</code></td>
 <td><code>/api</code></td>
-<td>Prefijo para rutas API</td>
+<td>Prefijo de todas las rutas de la API</td>
 </tr>
 <tr>
 <td><code>ENABLE_FRONTEND</code></td>
 <td><code>false</code></td>
-<td>Habilitar API Explorer en <code>/</code></td>
+<td>Habilitar el API Explorer en <code>/</code></td>
+</tr>
+<tr>
+<td><code>GITHUB_TOKEN</code></td>
+<td><em>(ninguno)</em></td>
+<td>Token de GitHub para autenticación en la API de GitHub</td>
+</tr>
+<tr>
+<td><code>TMP_FOLDER</code></td>
+<td><code>./tmp</code></td>
+<td>Carpeta para archivos temporales y base de datos</td>
+</tr>
+<tr>
+<td><code>ENV</code></td>
+<td><em>(ninguno)</em></td>
+<td><code>PROD</code> para desactivar logs de debug; <code>DEV</code>/<code>DEBUG</code> para verbose</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="bash"><span class="hl-3"># Ejemplo con todas las variables</span><br/><span class="hl-7">PORT</span><span class="hl-1">=</span><span class="hl-2">8080</span><span class="hl-1"> </span><span class="hl-7">API_PATH_PREFIX</span><span class="hl-1">=</span><span class="hl-2">/v1</span><span class="hl-1"> </span><span class="hl-7">ENABLE_FRONTEND</span><span class="hl-1">=</span><span class="hl-2">1</span><span class="hl-1"> </span><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">start</span>
+<a id="md:ejemplo-con-todas-las-variables" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Ejemplo con todas las variables<a href="#md:ejemplo-con-todas-las-variables" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-3">PORT</span><span class="hl-1">=</span><span class="hl-2">8080</span><span class="hl-1"> </span><span class="hl-3">API_PATH_PREFIX</span><span class="hl-1">=</span><span class="hl-2">/v1</span><span class="hl-1"> </span><span class="hl-3">ENABLE_FRONTEND</span><span class="hl-1">=</span><span class="hl-2">1</span><span class="hl-1"> </span><span class="hl-3">GITHUB_TOKEN</span><span class="hl-1">=</span><span class="hl-2">ghp_xxxx</span><span class="hl-1"> </span><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">start</span>
 </code><button type="button">Copy</button></pre>
 
-<a id="md:api-explorer" class="tsd-anchor"></a><h1 class="tsd-anchor-link">API Explorer<a href="#md:api-explorer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>Cuando <code>ENABLE_FRONTEND=1</code>, se sirve un frontend interactivo en la raíz (<code>/</code>) que permite:</p>
+<a id="md:api-rest" class="tsd-anchor"></a><h2 class="tsd-anchor-link">API REST<a href="#md:api-rest" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="md:endpoints-principales" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Endpoints principales<a href="#md:endpoints-principales" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Ruta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/</code></td>
+<td>Lista de todas las tablas disponibles</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/meta</code></td>
+<td>Lista de tablas con sus columnas y tipos</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/:tableName</code></td>
+<td>Consulta datos de una tabla</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/:tableName/meta</code></td>
+<td>Estructura de una tabla específica</td>
+</tr>
+</tbody>
+</table>
+<a id="md:parámetros-de-consulta" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Parámetros de consulta<a href="#md:parámetros-de-consulta" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>limit</code></td>
+<td>int</td>
+<td>Registros por página (default: 100)</td>
+<td><code>?limit=50</code></td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td>int</td>
+<td>Número de página (0-indexed)</td>
+<td><code>?page=2</code></td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>string</td>
+<td>Búsqueda en todas las columnas de texto</td>
+<td><code>?q=mexico</code></td>
+</tr>
+<tr>
+<td><code>orderBy.columna</code></td>
+<td>string</td>
+<td>Ordenar por columna y dirección</td>
+<td><code>?orderBy.c_Nombre=asc</code></td>
+</tr>
+<tr>
+<td><code>filters[col]</code></td>
+<td>string</td>
+<td>Filtrar por columna exacta</td>
+<td><code>?filters[c_Estado]=OAX</code></td>
+</tr>
+<tr>
+<td><code>filters[col][$gte]</code></td>
+<td>string</td>
+<td>Mayor o igual que</td>
+<td><code>?filters[edad][$gte]=18</code></td>
+</tr>
+<tr>
+<td><code>filters[col][$lt]</code></td>
+<td>string</td>
+<td>Menor que</td>
+<td><code>?filters[precio][$lt]=100</code></td>
+</tr>
+<tr>
+<td><code>filters[col][$ne]</code></td>
+<td>string</td>
+<td>Diferente de</td>
+<td><code>?filters[status][$ne]=inactivo</code></td>
+</tr>
+<tr>
+<td><code>select</code></td>
+<td>string</td>
+<td>Seleccionar columnas específicas</td>
+<td><code>?select=id,nombre</code></td>
+</tr>
+</tbody>
+</table>
+<a id="md:ejemplos-con-curl" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Ejemplos con curl<a href="#md:ejemplos-con-curl" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-4"># Listar todas las tablas</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">http://localhost:3000/api/</span><br/><br/><span class="hl-4"># Listar países del CFDI 4.0</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">http://localhost:3000/api/cfdi-40-paises</span><br/><br/><span class="hl-4"># Buscar países que contengan &quot;mexico&quot;</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?q=mexico&quot;</span><br/><br/><span class="hl-4"># Paginar resultados (10 por página, página 2)</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?limit=10&amp;page=1&quot;</span><br/><br/><span class="hl-4"># Ordenar por nombre (ascendente)</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?orderBy.c_Nombre=asc&quot;</span><br/><br/><span class="hl-4"># Filtrar por columna exacta</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?filters%5Bc_ClaveDeProducto%5D=01&quot;</span><br/><br/><span class="hl-4"># Seleccionar columnas específicas</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?select=c_ClavePais,c_Nombre&quot;</span><br/><br/><span class="hl-4"># Ver estructura de una tabla</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">http://localhost:3000/api/cfdi-40-paises/meta</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:formato-de-respuesta" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Formato de respuesta<a href="#md:formato-de-respuesta" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;success&quot;</span><span class="hl-1">: </span><span class="hl-6">true</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;error&quot;</span><span class="hl-1">: </span><span class="hl-6">false</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-7">200</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;code&quot;</span><span class="hl-1">: </span><span class="hl-7">0</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;description&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;ok&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;data&quot;</span><span class="hl-1">: [</span><br/><span class="hl-1">    { </span><span class="hl-5">&quot;id&quot;</span><span class="hl-1">: </span><span class="hl-7">1</span><span class="hl-1">, </span><span class="hl-5">&quot;nombre&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Valor 1&quot;</span><span class="hl-1"> },</span><br/><span class="hl-1">    { </span><span class="hl-5">&quot;id&quot;</span><span class="hl-1">: </span><span class="hl-7">2</span><span class="hl-1">, </span><span class="hl-5">&quot;nombre&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Valor 2&quot;</span><span class="hl-1"> }</span><br/><span class="hl-1">  ],</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;total&quot;</span><span class="hl-1">: </span><span class="hl-7">62</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;pageSize&quot;</span><span class="hl-1">: </span><span class="hl-7">100</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;page&quot;</span><span class="hl-1">: </span><span class="hl-7">0</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:estructura-de-meta" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Estructura de <code>/meta</code><a href="#md:estructura-de-meta" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;success&quot;</span><span class="hl-1">: </span><span class="hl-6">true</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;data&quot;</span><span class="hl-1">: [</span><br/><span class="hl-1">    { </span><span class="hl-5">&quot;name&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;id&quot;</span><span class="hl-1">, </span><span class="hl-5">&quot;type&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;integer&quot;</span><span class="hl-1">, </span><span class="hl-5">&quot;nullable&quot;</span><span class="hl-1">: </span><span class="hl-6">false</span><span class="hl-1">, </span><span class="hl-5">&quot;primaryKey&quot;</span><span class="hl-1">: </span><span class="hl-6">true</span><span class="hl-1"> },</span><br/><span class="hl-1">    { </span><span class="hl-5">&quot;name&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;c_Nombre&quot;</span><span class="hl-1">, </span><span class="hl-5">&quot;type&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;string&quot;</span><span class="hl-1">, </span><span class="hl-5">&quot;nullable&quot;</span><span class="hl-1">: </span><span class="hl-6">false</span><span class="hl-1">, </span><span class="hl-5">&quot;primaryKey&quot;</span><span class="hl-1">: </span><span class="hl-6">false</span><span class="hl-1"> }</span><br/><span class="hl-1">  ]</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:catálogos-disponibles" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Catálogos disponibles<a href="#md:catálogos-disponibles" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="md:cfdi-40-cfdi-40-" class="tsd-anchor"></a><h3 class="tsd-anchor-link">CFDI 4.0 (<code>cfdi-40-*</code>)<a href="#md:cfdi-40-cfdi-40-" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><table>
+<thead>
+<tr>
+<th>Tabla</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cfdi-40-paises</code></td>
+<td>Catálogo de países</td>
+</tr>
+<tr>
+<td><code>cfdi-40-codigos-postales</code></td>
+<td>Códigos postales</td>
+</tr>
+<tr>
+<td><code>cfdi-40-colonias</code></td>
+<td>Colonias</td>
+</tr>
+<tr>
+<td><code>cfdi-40-municipios</code></td>
+<td>Municipios</td>
+</tr>
+<tr>
+<td><code>cfdi-40-estados</code></td>
+<td>Estados</td>
+</tr>
+<tr>
+<td><code>cfdi-40-localidades</code></td>
+<td>Localidades</td>
+</tr>
+<tr>
+<td><code>cfdi-40-regimenes-fiscales</code></td>
+<td>Régimenes fiscales</td>
+</tr>
+<tr>
+<td><code>cfdi-40-formas-pago</code></td>
+<td>Formas de pago</td>
+</tr>
+<tr>
+<td><code>cfdi-40-metodos-pago</code></td>
+<td>Métodos de pago</td>
+</tr>
+<tr>
+<td><code>cfdi-40-monedas</code></td>
+<td>Monedas</td>
+</tr>
+<tr>
+<td><code>cfdi-40-tipos-comprobantes</code></td>
+<td>Tipos de comprobantes</td>
+</tr>
+<tr>
+<td><code>cfdi-40-uses</code></td>
+<td>Usos de CFDI</td>
+</tr>
+</tbody>
+</table>
+<a id="md:cfdi-33-cfdi-" class="tsd-anchor"></a><h3 class="tsd-anchor-link">CFDI 3.3 (<code>cfdi-*</code>)<a href="#md:cfdi-33-cfdi-" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Versión anterior de los mismos catálogos más complementos de:</p>
 <ul>
-<li>Explorar todas las tablas disponibles</li>
-<li>Filtrar datos con búsqueda, paginación y ordenamiento</li>
-<li>Seleccionar columnas a mostrar</li>
-<li>Copiar datos como TSV o JSON</li>
-<li>Ver la URL de la petición realizada</li>
-<li>Consultar documentación de la API</li>
+<li>Impuestos (<code>cfdi-impuestos</code>)</li>
+<li>Pedimentos (<code>cfdi-pedimentos</code>)</li>
+<li>Conceptos (<code>cfdi-conceptos</code>)</li>
 </ul>
-</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><ul><li><a href="#md:sqlite-auto"><span>Sqlite auto</span></a></li></ul><a href="#md:catálogos-incluidos"><span>Catálogos incluidos</span></a><a href="#md:uso"><span>Uso</span></a><a href="#md:api-rest"><span>API REST</span></a><ul><li><a href="#md:endpoints"><span>Endpoints</span></a></li><li><a href="#md:parámetros-de-consulta"><span>Parámetros de consulta</span></a></li><li><a href="#md:ejemplos"><span>Ejemplos</span></a></li><li><a href="#md:respuesta"><span>Respuesta</span></a></li></ul><a href="#md:variables-de-entorno"><span>Variables de entorno</span></a><a href="#md:api-explorer"><span>API <wbr/>Explorer</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>catalogos-sat-api-rest</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
+<a id="md:comprobantes-de-retenciones-ret-20-" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Comprobantes de Retenciones (<code>ret-20-*</code>)<a href="#md:comprobantes-de-retenciones-ret-20-" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Catálogos para CFDI de retenciones e información de pagos 2.0.</p>
+<a id="md:complemento-de-pagos-pagos-" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Complemento de Pagos (<code>pagos-*</code>)<a href="#md:complemento-de-pagos-pagos-" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Catálogos del complemento de recepción de pagos.</p>
+<a id="md:complemento-de-nóminas-nomina-" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Complemento de Nóminas (<code>nomina-*</code>)<a href="#md:complemento-de-nóminas-nomina-" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Catálogos para CFDI de nómina 1.2:</p>
+<ul>
+<li>Tipos de nómina</li>
+<li>Bancos</li>
+<li>Periodicidades de pago</li>
+<li>Tipos de contrato</li>
+<li>Riesgos de trabajo</li>
+<li>Empresas</li>
+<li>Estados</li>
+<li>Municipios</li>
+</ul>
+<a id="md:complemento-de-comercio-exterior-cce--y-cce-20-" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Complemento de Comercio Exterior (<code>cce-*</code> y <code>cce-20-*</code>)<a href="#md:complemento-de-comercio-exterior-cce--y-cce-20-" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Catálogos para el complemento de comercio exterior 1.1 y 2.0:</p>
+<ul>
+<li>Pedimentos</li>
+<li>Certificados de sello digital de aduanas</li>
+<li>Incoterms</li>
+<li>Fracciones arancelarias</li>
+<li>Unidades de medida</li>
+</ul>
+<a id="md:complemento-de-carta-porte-ccp-20--y-ccp-30-" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Complemento de Carta Porte (<code>ccp-20-*</code> y <code>ccp-30-*</code>)<a href="#md:complemento-de-carta-porte-ccp-20--y-ccp-30-" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Catálogos para el complemento de carta de porte 2.0 y 3.0:</p>
+<ul>
+<li>Tipos de transporte</li>
+<li>Configuración de vehículos</li>
+<li>Permisos</li>
+<li>Materiales peligrosos</li>
+<li>Mercancías</li>
+<li>Ubicaciones</li>
+</ul>
+<a id="md:api-explorer" class="tsd-anchor"></a><h2 class="tsd-anchor-link">API Explorer<a href="#md:api-explorer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Cuando <code>ENABLE_FRONTEND=1</code>, se sirve una interfaz web en la raíz (<code>/</code>) con las siguientes funcionalidades:</p>
+<a id="md:funciones" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Funciones<a href="#md:funciones" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><strong>Selector de tablas</strong> organizado por grupos (CFDI 4.0, Nóminas, Carta Porte, etc.)</li>
+<li><strong>Vista de estructura</strong> de tabla con columnas, tipos y primary keys</li>
+<li><strong>Filtros interactivos</strong>: búsqueda global, paginación, ordenamiento, filtros por columna</li>
+<li><strong>Tabla de datos</strong> con scroll horizontal, columna # estilo Excel y ordenamiento</li>
+<li><strong>Panel JSON</strong> que muestra la respuesta cruda de la API</li>
+<li><strong>Ejemplos de código</strong> en Fetch API, Axios y cURL</li>
+<li><strong>Referencia de filtros</strong> con todos los parámetros disponibles</li>
+<li><strong>Copiar TSV/JSON</strong> para exportar datos</li>
+<li><strong>Badge de estado</strong> de conexión a la API</li>
+</ul>
+<a id="md:uso-desde-javascript" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Uso desde JavaScript<a href="#md:uso-desde-javascript" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="javascript"><span class="hl-4">// Fetch API</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-8">response</span><span class="hl-1"> = </span><span class="hl-9">await</span><span class="hl-1"> </span><span class="hl-0">fetch</span><span class="hl-1">(</span><span class="hl-2">&#39;http://localhost:3000/api/cfdi-40-paises?limit=10&#39;</span><span class="hl-1">);</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-8">result</span><span class="hl-1"> = </span><span class="hl-9">await</span><span class="hl-1"> </span><span class="hl-3">response</span><span class="hl-1">.</span><span class="hl-0">json</span><span class="hl-1">();</span><br/><span class="hl-3">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-3">result</span><span class="hl-1">.</span><span class="hl-3">data</span><span class="hl-1">);</span><br/><br/><span class="hl-4">// Axios</span><br/><span class="hl-6">const</span><span class="hl-1"> { </span><span class="hl-8">data</span><span class="hl-1"> } = </span><span class="hl-9">await</span><span class="hl-1"> </span><span class="hl-3">axios</span><span class="hl-1">.</span><span class="hl-0">get</span><span class="hl-1">(</span><span class="hl-2">&#39;http://localhost:3000/api/cfdi-40-paises&#39;</span><span class="hl-1">, {</span><br/><span class="hl-1">  </span><span class="hl-3">params:</span><span class="hl-1"> { </span><span class="hl-3">limit:</span><span class="hl-1"> </span><span class="hl-7">10</span><span class="hl-1">, </span><span class="hl-3">page:</span><span class="hl-1"> </span><span class="hl-7">0</span><span class="hl-1">, </span><span class="hl-3">q:</span><span class="hl-1"> </span><span class="hl-2">&#39;mexico&#39;</span><span class="hl-1"> }</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:desarrollo" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Desarrollo<a href="#md:desarrollo" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="bash"><span class="hl-4"># Desarrollo con hot-reload</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">start:dev</span><br/><br/><span class="hl-4"># Compilar TypeScript (CommonJS + ESM)</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">build</span><br/><br/><span class="hl-4"># Compilar solo CommonJS</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">build:cjs</span><br/><br/><span class="hl-4"># Compilar solo ESM</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">build:esm</span><br/><br/><span class="hl-4"># Generar documentación TypeDoc</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">build</span><br/><br/><span class="hl-4"># Ejecutar pruebas</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">test</span><br/><br/><span class="hl-4"># Ejecutar pruebas end-to-end</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">test:e2e</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:arquitectura" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Arquitectura<a href="#md:arquitectura" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code><span class="hl-3">src</span><span class="hl-1">/</span><br/><span class="hl-1">├── </span><span class="hl-3">index</span><span class="hl-1">.</span><span class="hl-3">ts</span><span class="hl-1">          # </span><span class="hl-3">Servidor</span><span class="hl-1"> </span><span class="hl-3">Express</span><span class="hl-1"> + </span><span class="hl-3">rutas</span><span class="hl-1"> </span><span class="hl-8">API</span><br/><span class="hl-1">└── </span><span class="hl-3">download</span><span class="hl-1">-</span><span class="hl-3">db</span><span class="hl-1">.</span><span class="hl-3">ts</span><span class="hl-1">    # </span><span class="hl-3">Descarga</span><span class="hl-1"> </span><span class="hl-8">BD</span><span class="hl-1"> </span><span class="hl-3">desde</span><span class="hl-1"> </span><span class="hl-3">GitHub</span><br/><br/><span class="hl-3">public</span><span class="hl-1">/</span><br/><span class="hl-1">├── </span><span class="hl-3">index</span><span class="hl-1">.</span><span class="hl-3">html</span><span class="hl-1">         # </span><span class="hl-3">Template</span><span class="hl-1"> </span><span class="hl-8">API</span><span class="hl-1"> </span><span class="hl-3">Explorer</span><br/><span class="hl-1">├── </span><span class="hl-3">js</span><span class="hl-1">/</span><span class="hl-3">app</span><span class="hl-1">.</span><span class="hl-3">js</span><span class="hl-1">         # </span><span class="hl-3">Vue</span><span class="hl-1"> </span><span class="hl-7">3</span><span class="hl-1"> + </span><span class="hl-3">Tabulator</span><br/><span class="hl-1">└── </span><span class="hl-3">css</span><span class="hl-1">/</span><span class="hl-3">styles</span><span class="hl-1">.</span><span class="hl-3">css</span><span class="hl-1">    # </span><span class="hl-3">Estilos</span><br/><br/><span class="hl-3">tmp</span><span class="hl-1">/</span><br/><span class="hl-1">├── </span><span class="hl-3">catalogs</span><span class="hl-1">.</span><span class="hl-3">db</span><span class="hl-1">        # </span><span class="hl-3">Base</span><span class="hl-1"> </span><span class="hl-3">de</span><span class="hl-1"> </span><span class="hl-3">datos</span><span class="hl-1"> </span><span class="hl-3">SQLite</span><br/><span class="hl-1">└── </span><span class="hl-3">version</span><span class="hl-1">.</span><span class="hl-3">txt</span><span class="hl-1">        # </span><span class="hl-3">Versión</span><span class="hl-1"> </span><span class="hl-3">actual</span><span class="hl-1"> </span><span class="hl-3">del</span><span class="hl-1"> </span><span class="hl-3">catálogo</span>
+</code><button>Copy</button></pre>
+
+<a id="md:flujo-de-datos" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Flujo de datos<a href="#md:flujo-de-datos" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ol>
+<li>Al iniciar, <code>performUpdateIfNeeded()</code> consulta la API de GitHub para verificar la versión</li>
+<li>Si hay nueva versión, descarga <code>catalogs.db.bz2</code> y lo descomprime en <code>tmp/</code></li>
+<li>Knex se conecta a la base SQLite</li>
+<li>ADBA genera modelos y rutas REST automáticamente</li>
+<li>El endpoint <code>/meta</code> personalizado expone la estructura de cada tabla</li>
+</ol>
+<a id="md:origen-de-datos" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Origen de datos<a href="#md:origen-de-datos" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>La base de datos se obtiene del repositorio <a href="https://github.com/phpcfdi/resources-sat-catalogs" target="_blank" class="external">phpcfdi/resources-sat-catalogs</a>.</p>
+<p>Los tags de GitHub representan versiones de los catálogos del SAT. El servidor verifica automáticamente si hay actualizaciones al iniciar.</p>
+<a id="md:límites-de-github-api" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Límites de GitHub API<a href="#md:límites-de-github-api" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>Sin autenticación</th>
+<th>Con <code>GITHUB_TOKEN</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>60 requests/hora</td>
+<td>5,000 requests/hora</td>
+</tr>
+</tbody>
+</table>
+<a id="md:licencia" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Licencia<a href="#md:licencia" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>ISC</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:sat-catalogs-api-rest"><span>SAT <wbr/>Catalogs API REST</span></a><ul><li><a href="#md:características"><span>Características</span></a></li><li><a href="#md:requisitos"><span>Requisitos</span></a></li><li><a href="#md:instalación"><span>Instalación</span></a></li><li><a href="#md:inicio-rápido"><span>Inicio rápido</span></a></li><li><a href="#md:configuración"><span>Configuración</span></a></li><li><ul><li><a href="#md:ejemplo-con-todas-las-variables"><span>Ejemplo con todas las variables</span></a></li></ul></li><li><a href="#md:api-rest"><span>API REST</span></a></li><li><ul><li><a href="#md:endpoints-principales"><span>Endpoints principales</span></a></li><li><a href="#md:parámetros-de-consulta"><span>Parámetros de consulta</span></a></li><li><a href="#md:ejemplos-con-curl"><span>Ejemplos con curl</span></a></li><li><a href="#md:formato-de-respuesta"><span>Formato de respuesta</span></a></li><li><a href="#md:estructura-de-meta"><span>Estructura de /meta</span></a></li></ul></li><li><a href="#md:catálogos-disponibles"><span>Catálogos disponibles</span></a></li><li><ul><li><a href="#md:cfdi-40-cfdi-40-"><span>CFDI 4.0 (cfdi-<wbr/>40-<wbr/>*)</span></a></li><li><a href="#md:cfdi-33-cfdi-"><span>CFDI 3.3 (cfdi-<wbr/>*)</span></a></li><li><a href="#md:comprobantes-de-retenciones-ret-20-"><span>Comprobantes de <wbr/>Retenciones (ret-<wbr/>20-<wbr/>*)</span></a></li><li><a href="#md:complemento-de-pagos-pagos-"><span>Complemento de <wbr/>Pagos (pagos-<wbr/>*)</span></a></li><li><a href="#md:complemento-de-nóminas-nomina-"><span>Complemento de <wbr/>Nóminas (nomina-<wbr/>*)</span></a></li><li><a href="#md:complemento-de-comercio-exterior-cce--y-cce-20-"><span>Complemento de <wbr/>Comercio <wbr/>Exterior (cce-<wbr/>* y cce-<wbr/>20-<wbr/>*)</span></a></li><li><a href="#md:complemento-de-carta-porte-ccp-20--y-ccp-30-"><span>Complemento de <wbr/>Carta <wbr/>Porte (ccp-<wbr/>20-<wbr/>* y ccp-<wbr/>30-<wbr/>*)</span></a></li></ul></li><li><a href="#md:api-explorer"><span>API <wbr/>Explorer</span></a></li><li><ul><li><a href="#md:funciones"><span>Funciones</span></a></li><li><a href="#md:uso-desde-javascript"><span>Uso desde <wbr/>Java<wbr/>Script</span></a></li></ul></li><li><a href="#md:desarrollo"><span>Desarrollo</span></a></li><li><a href="#md:arquitectura"><span>Arquitectura</span></a></li><li><ul><li><a href="#md:flujo-de-datos"><span>Flujo de datos</span></a></li></ul></li><li><a href="#md:origen-de-datos"><span>Origen de datos</span></a></li><li><a href="#md:límites-de-github-api"><span>Límites de <wbr/>Git<wbr/>Hub API</span></a></li><li><a href="#md:licencia"><span>Licencia</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>catalogos-sat-api-rest</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
