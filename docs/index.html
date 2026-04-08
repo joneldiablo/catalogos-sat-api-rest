@@ -10,4 +10,113 @@
 <li>Catálogos de complemento de Carta Porte 2.0 (<strong>ccp-20-</strong>).</li>
 <li>Catálogos de complemento de Carta Porte 3.0 (<strong>ccp-30-</strong>).</li>
 </ul>
-</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><ul><li><a href="#md:sqlite-auto"><span>Sqlite auto</span></a></li></ul><a href="#md:catálogos-incluidos"><span>Catálogos incluidos</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>catalogos-sat-api-rest</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
+<a id="md:uso" class="tsd-anchor"></a><h1 class="tsd-anchor-link">Uso<a href="#md:uso" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">start</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:api-rest" class="tsd-anchor"></a><h1 class="tsd-anchor-link">API REST<a href="#md:api-rest" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><a id="md:endpoints" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Endpoints<a href="#md:endpoints" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Ruta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/api/tables</code></td>
+<td>Lista todas las tablas disponibles</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/meta</code></td>
+<td>Lista tablas con sus columnas y tipos</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/:tableName</code></td>
+<td>Consulta datos de una tabla</td>
+</tr>
+</tbody>
+</table>
+<a id="md:parámetros-de-consulta" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Parámetros de consulta<a href="#md:parámetros-de-consulta" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>search</code></td>
+<td>Búsqueda en todas las columnas</td>
+<td><code>?search=MX</code></td>
+</tr>
+<tr>
+<td><code>limit</code></td>
+<td>Registros por página (default: 100)</td>
+<td><code>?limit=50</code></td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td>Número de página</td>
+<td><code>?page=2</code></td>
+</tr>
+<tr>
+<td><code>orderBy.columna</code></td>
+<td>Ordenar por columna</td>
+<td><code>?orderBy.id=asc</code></td>
+</tr>
+<tr>
+<td><code>select</code></td>
+<td>Columnas a retornar</td>
+<td><code>?select=id,nombre</code></td>
+</tr>
+</tbody>
+</table>
+<a id="md:ejemplos" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Ejemplos<a href="#md:ejemplos" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="bash"><span class="hl-3"># Listar países</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises&quot;</span><br/><br/><span class="hl-3"># Filtrar por búsqueda</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?search=México&quot;</span><br/><br/><span class="hl-3"># Paginación</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?page=2&amp;limit=10&quot;</span><br/><br/><span class="hl-3"># Ordenamiento</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?orderBy.c_Nombre=asc&quot;</span><br/><br/><span class="hl-3"># Seleccionar columnas específicas</span><br/><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-2">&quot;http://localhost:3000/api/cfdi-40-paises?select=c_Nombre,c_Descripcion&quot;</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:respuesta" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Respuesta<a href="#md:respuesta" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;data&quot;</span><span class="hl-1">: [</span><span class="hl-5">...</span><span class="hl-1">],</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;meta&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;page&quot;</span><span class="hl-1">: </span><span class="hl-6">1</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;pageSize&quot;</span><span class="hl-1">: </span><span class="hl-6">100</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;totalRecords&quot;</span><span class="hl-1">: </span><span class="hl-6">62</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:variables-de-entorno" class="tsd-anchor"></a><h1 class="tsd-anchor-link">Variables de entorno<a href="#md:variables-de-entorno" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PORT</code></td>
+<td><code>3000</code></td>
+<td>Puerto del servidor</td>
+</tr>
+<tr>
+<td><code>API_PATH_PREFIX</code></td>
+<td><code>/api</code></td>
+<td>Prefijo para rutas API</td>
+</tr>
+<tr>
+<td><code>ENABLE_FRONTEND</code></td>
+<td><code>false</code></td>
+<td>Habilitar API Explorer en <code>/</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="bash"><span class="hl-3"># Ejemplo con todas las variables</span><br/><span class="hl-7">PORT</span><span class="hl-1">=</span><span class="hl-2">8080</span><span class="hl-1"> </span><span class="hl-7">API_PATH_PREFIX</span><span class="hl-1">=</span><span class="hl-2">/v1</span><span class="hl-1"> </span><span class="hl-7">ENABLE_FRONTEND</span><span class="hl-1">=</span><span class="hl-2">1</span><span class="hl-1"> </span><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">start</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:api-explorer" class="tsd-anchor"></a><h1 class="tsd-anchor-link">API Explorer<a href="#md:api-explorer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>Cuando <code>ENABLE_FRONTEND=1</code>, se sirve un frontend interactivo en la raíz (<code>/</code>) que permite:</p>
+<ul>
+<li>Explorar todas las tablas disponibles</li>
+<li>Filtrar datos con búsqueda, paginación y ordenamiento</li>
+<li>Seleccionar columnas a mostrar</li>
+<li>Copiar datos como TSV o JSON</li>
+<li>Ver la URL de la petición realizada</li>
+<li>Consultar documentación de la API</li>
+</ul>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><ul><li><a href="#md:sqlite-auto"><span>Sqlite auto</span></a></li></ul><a href="#md:catálogos-incluidos"><span>Catálogos incluidos</span></a><a href="#md:uso"><span>Uso</span></a><a href="#md:api-rest"><span>API REST</span></a><ul><li><a href="#md:endpoints"><span>Endpoints</span></a></li><li><a href="#md:parámetros-de-consulta"><span>Parámetros de consulta</span></a></li><li><a href="#md:ejemplos"><span>Ejemplos</span></a></li><li><a href="#md:respuesta"><span>Respuesta</span></a></li></ul><a href="#md:variables-de-entorno"><span>Variables de entorno</span></a><a href="#md:api-explorer"><span>API <wbr/>Explorer</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>catalogos-sat-api-rest</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
