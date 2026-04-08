@@ -1,0 +1,245 @@
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+}
+
+body {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.navbar-brand i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 0.5rem;
+}
+
+.card-header {
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+}
+
+#data-table {
+  min-height: 400px;
+  overflow-x: auto;
+}
+
+.tabulator {
+  min-width: 100%;
+}
+
+.tabulator {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.tabulator .tabulator-header {
+  background-color: #f8f9fa;
+}
+
+.tabulator .tabulator-header .tabulator-col {
+  background-color: #e9ecef;
+  font-weight: 600;
+}
+
+.tabulator .tabulator-header .tabulator-col:first-child {
+  background-color: #dee2e6 !important;
+}
+
+.tabulator .tabulator-cell:first-child {
+  background-color: #f8f9fa !important;
+  color: #6c757d !important;
+}
+
+.tabulator-row:hover {
+  background-color: #f1f3f5 !important;
+}
+
+.tabulator .tabulator-paginator {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 0.5rem;
+}
+
+.tabulator .tabulator-page-size {
+  padding: 0.25rem 0.5rem;
+}
+
+pre code.hljs {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.hljs-string {
+  color: #98c379;
+}
+
+.hljs-number {
+  color: #d19a66;
+}
+
+.hljs-literal {
+  color: #56b6c2;
+}
+
+.hljs-attr {
+  color: #e06c75;
+}
+
+.json-key {
+  color: #e06c75;
+}
+
+.json-string {
+  color: #98c379;
+}
+
+.json-number {
+  color: #d19a66;
+}
+
+.json-boolean {
+  color: #56b6c2;
+}
+
+.json-null {
+  color: #ab9496;
+}
+
+.json-punctuation {
+  color: #abb2bf;
+}
+
+.request-url {
+  background-color: #1e1e1e !important;
+  border-radius: 0 0 0.375rem 0.375rem;
+}
+
+.request-url code {
+  color: #d4d4d4 !important;
+  background: transparent !important;
+}
+
+pre.bg-dark,
+.code-block {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  background-color: #1e1e1e !important;
+  color: #d4d4d4 !important;
+  border-radius: 0.375rem;
+}
+
+pre.bg-dark code,
+.code-block code {
+  color: #d4d4d4 !important;
+  background: transparent !important;
+}
+
+.tab-content pre {
+  margin: 0 !important;
+}
+
+.tab-content pre code {
+  color: #d4d4d4 !important;
+}
+
+/* Ensure text is visible in code blocks */
+pre.bg-dark *,
+.code-block * {
+  color: inherit !important;
+  background-color: inherit !important;
+}
+
+/* Specific code element colors */
+pre code .hljs-comment { color: #6a9955 !important; }
+pre code .hljs-string { color: #ce9178 !important; }
+pre code .hljs-number { color: #b5cea8 !important; }
+pre code .hljs-keyword { color: #569cd6 !important; }
+pre code .hljs-built_in { color: #4ec9b0 !important; }
+pre code .hljs-function { color: #dcdcaa !important; }
+pre code .hljs-title { color: #dcdcaa !important; }
+pre code .hljs-params { color: #9cdcfe !important; }
+pre code .hljs-variable { color: #9cdcfe !important; }
+pre code .hljs-attr { color: #9cdcfe !important; }
+pre code .hljs-literal { color: #569cd6 !important; }
+pre code .hljs-type { color: #4ec9b0 !important; }
+pre code .hljs-meta { color: #9b9b9b !important; }
+pre code .hljs-selector-class { color: #d7ba7d !important; }
+pre code .hljs-selector-tag { color: #d7ba7d !important; }
+pre code .hljs-punctuation { color: #808080 !important; }
+pre code .hljs-operator { color: #d4d4d4 !important; }
+
+/* JSON Viewer Panel */
+.json-viewer {
+  margin: 0;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  overflow: auto;
+  height: 100%;
+  border-radius: 0;
+}
+
+.json-viewer code {
+  color: #d4d4d4 !important;
+  background: transparent !important;
+  white-space: pre-wrap !important;
+  word-break: break-all !important;
+}
+
+.json-viewer .hljs-string { color: #ce9178 !important; }
+.json-viewer .hljs-number { color: #b5cea8 !important; }
+.json-viewer .hljs-literal { color: #569cd6 !important; }
+.json-viewer .hljs-attr { color: #9cdcfe !important; }
+
+.form-control.font-monospace {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.85rem;
+}
+
+.badge {
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link {
+  cursor: pointer;
+}
+
+code {
+  background-color: #e9ecef;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+.table code {
+  background-color: #f1f3f5;
+  color: #0d6efd;
+}
+
+.btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  
+  .table-responsive {
+    font-size: 0.85rem;
+  }
+  
+  pre.bg-dark {
+    font-size: 0.75rem;
+  }
+}
