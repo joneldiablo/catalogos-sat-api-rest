@@ -13,6 +13,7 @@ import { performUpdateIfNeeded } from './download-db';
 
 const TMP_FOLDER = process.env.TMP_FOLDER ?? './tmp';
 const API_PATH_PREFIX = process.env.API_PATH_PREFIX ?? '/api';
+const ENABLE_FRONTEND = process.env.ENABLE_FRONTEND === 'true' || process.env.ENABLE_FRONTEND === '1';
 
 const startServer = async () => {
   await performUpdateIfNeeded();
@@ -33,7 +34,13 @@ const startServer = async () => {
   app.use(cors());
   app.use(express.json());
   app.use(morgan('dev'));
-  app.use(express.static(path.join(__dirname, '../../public')));
+  
+  if (ENABLE_FRONTEND) {
+    app.use(express.static(path.join(__dirname, '../../public')));
+    console.log('Frontend enabled at /');
+  } else {
+    console.log('Frontend disabled (set ENABLE_FRONTEND=1 to enable)');
+  }
 
   const models = await generateModels(knexInstance);
 
