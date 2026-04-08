@@ -29,7 +29,7 @@ const startServer = async () => {
   console.log('database says: 2 + 2 =', checkDatabase[0].testConn);
 
   const app = express();
-  const port = 3000;
+  const port = parseInt(process.env.PORT ?? '3000', 10);
 
   app.use(cors());
   app.use(express.json());
