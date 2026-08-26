@@ -66,6 +66,10 @@ createApp({
       return `${window.location.origin}${API_BASE}/${selectedTable.value}/?${params.toString()}`;
     });
     
+    const codeExampleFetch = ref('// Selecciona una tabla para ver el ejemplo');
+    const codeExampleAxios = ref('// Selecciona una tabla para ver el ejemplo');
+    const codeExampleCurl = ref('# Selecciona una tabla para ver el ejemplo');
+    
     function buildParams() {
       const params = new URLSearchParams();
       params.append('limit', pageSize.value);
@@ -78,19 +82,23 @@ createApp({
       return params;
     }
     
-    const codeExampleFetch = computed(() => {
-      if (!selectedTable.value) return '// Selecciona una tabla para ver el ejemplo';
+    function updateCodeExamples() {
+      if (!selectedTable.value) {
+        codeExampleFetch.value = '// Selecciona una tabla para ver el ejemplo';
+        codeExampleAxios.value = '// Selecciona una tabla para ver el ejemplo';
+        codeExampleCurl.value = '# Selecciona una tabla para ver el ejemplo';
+        return;
+      }
+      
       const params = buildParams();
       const qs = params.toString();
       const url = `${API_BASE}/${selectedTable.value}/${qs ? '?' + qs : ''}`;
-      return `const response = await fetch('${url}');
+      
+      codeExampleFetch.value = `const response = await fetch('${url}');
 const data = await response.json();
 console.log(data.data);  // Array de registros
 console.log(data.total); // Total de registros encontrados`;
-    });
-    
-    const codeExampleAxios = computed(() => {
-      if (!selectedTable.value) return '// Selecciona una tabla para ver el ejemplo';
+      
       const paramsObj = {};
       paramsObj.limit = pageSize.value;
       paramsObj.page = currentPage.value;
@@ -101,20 +109,14 @@ console.log(data.total); // Total de registros encontrados`;
         paramsObj.filters[f.column] = f.value;
       });
       const paramsStr = JSON.stringify(paramsObj, null, 2).replace(/"/g, "'");
-      return `const { data } = await axios.get('${API_BASE}/${selectedTable.value}', {
+      codeExampleAxios.value = `const { data } = await axios.get('${API_BASE}/${selectedTable.value}', {
   params: ${paramsStr}
 });
 console.log(data.data);  // Array de registros
 console.log(data.total); // Total de registros encontrados`;
-    });
-    
-    const codeExampleCurl = computed(() => {
-      if (!selectedTable.value) return '# Selecciona una tabla para ver el ejemplo';
-      const params = buildParams();
-      const qs = params.toString();
-      const url = `${API_BASE}/${selectedTable.value}/${qs ? '?' + qs : ''}`;
-      return `curl '${window.location.origin}${url}'`;
-    });
+      
+      codeExampleCurl.value = `curl '${window.location.origin}${url}'`;
+    }
     
     function onPageInput(event) {
       const val = parseInt(event.target.value) - 1;
@@ -231,33 +233,39 @@ console.log(data.total); // Total de registros encontrados`;
         columns.value = [];
         tableData.value = [];
         totalRecords.value = 0;
+        updateCodeExamples();
         fetchMeta().then(loadData);
       }
     }
     
     function toggleOrder() {
       orderDirection.value = orderDirection.value === 'asc' ? 'desc' : 'asc';
+      updateCodeExamples();
       loadData();
     }
     
     function changeOrderBy() {
+      updateCodeExamples();
       loadData();
     }
     
     function prevPage() {
       if (currentPage.value > 0) {
         currentPage.value--;
+        updateCodeExamples();
         loadData();
       }
     }
     
     function nextPage() {
       currentPage.value++;
+      updateCodeExamples();
       loadData();
     }
     
     function changePageSize() {
       currentPage.value = 0;
+      updateCodeExamples();
       loadData();
     }
     
@@ -266,6 +274,7 @@ console.log(data.total); // Total de registros encontrados`;
       if (searchTimeout) clearTimeout(searchTimeout);
       searchTimeout = setTimeout(() => {
         currentPage.value = 0;
+        updateCodeExamples();
         loadData();
       }, 300);
     }
@@ -276,16 +285,19 @@ console.log(data.total); // Total de registros encontrados`;
       filterColumn.value = '';
       filterValue.value = '';
       currentPage.value = 0;
+      updateCodeExamples();
       loadData();
     }
     
     function removeFilter(index) {
       activeFilters.value.splice(index, 1);
+      updateCodeExamples();
       loadData();
     }
     
     function clearFilters() {
       activeFilters.value = [];
+      updateCodeExamples();
       loadData();
     }
     
