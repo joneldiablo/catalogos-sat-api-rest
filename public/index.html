@@ -249,8 +249,9 @@
       <div class="row mt-3">
         <div class="col-12">
           <div class="card">
-            <div class="card-header bg-light">
+            <div class="card-header bg-light d-flex justify-content-between align-items-center">
               <h6 class="mb-0"><i class="bi bi-code-square"></i> Ejemplos de Uso (Desarrolladores)</h6>
+              <small class="text-muted">Se actualiza con tu búsqueda actual</small>
             </div>
             <div class="card-body">
               <ul class="nav nav-tabs" role="tablist">
@@ -266,50 +267,13 @@
               </ul>
               <div class="tab-content mt-3">
                 <div class="tab-pane fade show active" id="fetch-tab">
-                  <pre class="bg-dark text-light p-3 rounded"><code>// Obtener todos los registros
-const response = await fetch('{{ apiEndpointFull }}');
-const data = await response.json();
-
-// Con filtros
-const response = await fetch('{{ apiEndpointFull }}?limit=10&page=0');
-const data = await response.json();
-
-// Con búsqueda
-const response = await fetch('{{ apiEndpointFull }}?q=busqueda');
-
-// Con ordenamiento
-const response = await fetch('{{ apiEndpointFull }}?orderBy.columna=desc');
-
-// Obtener estructura de la tabla
-const meta = await fetch('{{ apiEndpointMeta }}');
-const schema = await meta.json();</code></pre>
+                  <pre class="bg-dark text-light p-3 rounded"><code>{{ codeExampleFetch }}</code></pre>
                 </div>
                 <div class="tab-pane fade" id="axios-tab">
-                  <pre class="bg-dark text-light p-3 rounded"><code>// Obtener registros
-const { data } = await axios.get('{{ apiEndpointFull }}', {
-  params: { limit: 10, page: 0, q: 'busqueda' }
-});
-
-// Con filtros
-const { data } = await axios.get('{{ apiEndpointFull }}', {
-  params: { filters: { columna: 'valor' } }
-});</code></pre>
+                  <pre class="bg-dark text-light p-3 rounded"><code>{{ codeExampleAxios }}</code></pre>
                 </div>
                 <div class="tab-pane fade" id="curl-tab">
-                  <pre class="bg-dark text-light p-3 rounded"><code># Listar registros
-curl '{{ apiEndpointFull }}'
-
-# Con límite
-curl '{{ apiEndpointFull }}?limit=10'
-
-# Con búsqueda
-curl '{{ apiEndpointFull }}?q=busqueda'
-
-# Con ordenamiento
-curl '{{ apiEndpointFull }}?orderBy.columna=desc'
-
-# Ver estructura
-curl '{{ apiEndpointMeta }}'</code></pre>
+                  <pre class="bg-dark text-light p-3 rounded"><code>{{ codeExampleCurl }}</code></pre>
                 </div>
               </div>
             </div>

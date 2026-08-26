@@ -62,6 +62,11 @@ createApp({
     
     const currentRequestUrl = computed(() => {
       if (!selectedTable.value) return '';
+      const params = buildParams();
+      return `${window.location.origin}${API_BASE}/${selectedTable.value}/?${params.toString()}`;
+    });
+    
+    function buildParams() {
       const params = new URLSearchParams();
       params.append('limit', pageSize.value);
       params.append('page', currentPage.value);
@@ -70,7 +75,45 @@ createApp({
       activeFilters.value.forEach(f => {
         params.append(`filters[${f.column}]`, f.value);
       });
-      return `${window.location.origin}${API_BASE}/${selectedTable.value}/?${params.toString()}`;
+      return params;
+    }
+    
+    const codeExampleFetch = computed(() => {
+      if (!selectedTable.value) return '// Selecciona una tabla para ver el ejemplo';
+      const params = buildParams();
+      const qs = params.toString();
+      const url = `${API_BASE}/${selectedTable.value}/${qs ? '?' + qs : ''}`;
+      return `const response = await fetch('${url}');
+const data = await response.json();
+console.log(data.data);  // Array de registros
+console.log(data.total); // Total de registros encontrados`;
+    });
+    
+    const codeExampleAxios = computed(() => {
+      if (!selectedTable.value) return '// Selecciona una tabla para ver el ejemplo';
+      const paramsObj = {};
+      paramsObj.limit = pageSize.value;
+      paramsObj.page = currentPage.value;
+      if (searchQuery.value) paramsObj.q = searchQuery.value;
+      if (orderByColumn.value) paramsObj[`orderBy.${orderByColumn.value}`] = orderDirection.value;
+      activeFilters.value.forEach(f => {
+        if (!paramsObj.filters) paramsObj.filters = {};
+        paramsObj.filters[f.column] = f.value;
+      });
+      const paramsStr = JSON.stringify(paramsObj, null, 2).replace(/"/g, "'");
+      return `const { data } = await axios.get('${API_BASE}/${selectedTable.value}', {
+  params: ${paramsStr}
+});
+console.log(data.data);  // Array de registros
+console.log(data.total); // Total de registros encontrados`;
+    });
+    
+    const codeExampleCurl = computed(() => {
+      if (!selectedTable.value) return '# Selecciona una tabla para ver el ejemplo';
+      const params = buildParams();
+      const qs = params.toString();
+      const url = `${API_BASE}/${selectedTable.value}/${qs ? '?' + qs : ''}`;
+      return `curl '${window.location.origin}${url}'`;
     });
     
     function onPageInput(event) {
@@ -288,6 +331,7 @@ createApp({
       currentPage, pageSize, searchQuery, orderByColumn, orderDirection,
       filterColumn, filterValue,       activeFilters, showRawJson,
       apiStatus, columns, tableMeta, tableRef,       apiEndpoint, highlightedJson, displayPage, totalPages, currentRequestUrl,
+      codeExampleFetch, codeExampleAxios, codeExampleCurl,
       onTableChange, toggleOrder, changeOrderBy, prevPage, nextPage, changePageSize, onPageInput, debouncedSearch, applyFilter, removeFilter, clearFilters, refreshData, copyTsv, copyJson, copyRequest
     };
   }
